@@ -1,0 +1,9 @@
+#metallb-advancedIP.yaml
+apiVersion: metallb.io/v1beta1
+kind: IPAddressPool
+metadata:
+  name: loadpool
+  namespace: metallb-system
+spec:
+  addresses:
+  - {{ .Values.IPadresse}} // Gibt an welche IP Adresse verwendet werden soll. Bei erweiterung muss ranges angegeben werden.
