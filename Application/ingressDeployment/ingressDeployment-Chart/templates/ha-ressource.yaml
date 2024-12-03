@@ -15,6 +15,6 @@ spec:
             pathType: Prefix
             backend:
               service:
-                name: {{ .Values.ingress-service-name | default "example-pod-service" }}
+                name: {{ .Values.ingressServiceName | default "example-pod-service" }}
                 port:
-                  number: {{ .Values.ingress-service-port | default 80 }}
+                  number: {{ .ValuesIngressPervicePort | default 80 }}
