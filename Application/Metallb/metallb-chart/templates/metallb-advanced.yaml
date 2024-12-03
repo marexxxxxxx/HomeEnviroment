@@ -6,4 +6,4 @@ metadata:
   namespace: metallb-system
 spec:
   addresses:
-  - {{ .Values.IPadresse}} // Gibt an welche IP Adresse verwendet werden soll. Bei erweiterung muss ranges angegeben werden.
+  - {{ .Values.IPadresse}} #Gibt an welche IP Adresse verwendet werden soll. Bei erweiterung muss ranges angegeben werden.
