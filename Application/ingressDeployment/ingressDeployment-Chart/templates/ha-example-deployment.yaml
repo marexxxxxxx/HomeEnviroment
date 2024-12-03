@@ -1,0 +1,19 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: web-server
+  namespace: {{ .Values.default-ingress-namespace | default "web"}}
+spec:
+  selector:
+    matchLabels:
+      app: {{ .Values.examplePod | default "examplePod"}}
+  template:
+    metadata:
+      labels:
+        app: {{ .Values.examplePod | default "examplePod"}}
+    spec:
+      containers:
+      - name: httpd
+        image: httpd:2.4.53-alpine
+        ports:
+        - containerPort: 80
