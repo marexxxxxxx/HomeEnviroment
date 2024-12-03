@@ -8,7 +8,7 @@ metadata:
 spec:
   ingressClassName: haproxy
   rules:
-    - host: {{ .Values.hostName }}
+    - host: {{ .Values.hostName | default "marex.labhome"}}
       http:
         paths:
           - path: /
