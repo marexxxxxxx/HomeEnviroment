@@ -2,7 +2,7 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: web-server
-  namespace: {{ .Values.default-ingress-namespace | default "web"}}
+  namespace: {{ .Values.default_ingress_namespace | default "web"}}
 spec:
   selector:
     matchLabels:
