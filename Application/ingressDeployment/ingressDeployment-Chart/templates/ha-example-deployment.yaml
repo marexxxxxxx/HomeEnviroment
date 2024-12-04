@@ -2,15 +2,15 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: web-server
-  namespace: {{ .Values.default_ingress_namespace | default "web"}}
+  namespace: {{ .Values.default_ingress_namespace  default "web"}}
 spec:
   selector:
     matchLabels:
-      app: {{ .Values.examplePod | default "examplePod"}}
+      app: {{ .Values.examplePod  default "examplePod"}}
   template:
     metadata:
       labels:
-        app: {{ .Values.examplePod | default "examplePod"}}
+        app: {{ .Values.examplePod  default "examplePod"}}
     spec:
       containers:
       - name: httpd
